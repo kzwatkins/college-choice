@@ -29,6 +29,18 @@
           </select>
         </label>
 
+<center><strong>- OR -</strong></center>
+
+        <label for="subjects">Choose a favorite subject
+          <select id="subjects" name="subjects">
+            <option value="">Any</option>
+            {% for subj in site.data.subjects%}
+            <option value="{{ subj.subject}}" name="subjects" id="{{subj.abbr}}">{{subj.subject}}</option>
+            {% endfor %}
+          </select>
+        </label>
+
+
       </div>
 
       <input type="submit" class="sr-only">
